@@ -1,0 +1,79 @@
+<!-- <!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo">SportBooking</div>
+        <nav>
+            <a href="index.html" class="active">الرئيسية</a>
+            <a href="facilities.html">الأماكن</a>
+            <a href="booking.html">الحجز</a>
+            <a href="login.html">تسجيل الدخول</a>
+        </nav>
+    </div>
+</header>
+
+
+<section class="auth-section">
+    <h2>تسجيل الدخول</h2>
+    <form action="#" method="POST" class="auth-form">
+        <label>البريد الإلكتروني</label>
+        <input type="email" name="email" required>
+
+        <label>كلمة المرور</label>
+        <input type="password" name="password" required>
+
+        <button type="submit" class="btn">دخول</button>
+
+        <p class="link">ليس لديك حساب؟ <a href="register.html">إنشاء حساب</a></p>
+    </form>
+</section>
+
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo">SportBooking</div>
+        <nav>
+            <a href="{{ url_for('home') }}">الرئيسية</a>
+          <a href="{{ url_for('facilities_page') }}">الأماكن</a>
+            <a href="{{ url_for('booking') }}">الحجز</a>
+            <a href="{{ url_for('login') }}" class="active">تسجيل الدخول</a>
+        </nav>
+    </div>
+</header>
+
+<section class="auth-section">
+    <h2>تسجيل الدخول</h2>
+    <form action="#" method="POST" class="auth-form">
+        <label>البريد الإلكتروني</label>
+        <input type="email" name="email" required>
+
+        <label>كلمة المرور</label>
+        <input type="password" name="password" required>
+
+        <button type="submit" class="btn">دخول</button>
+
+        <p class="link">ليس لديك حساب؟ <a href="{{ url_for('register') }}">إنشاء حساب</a></p>
+    </form>
+</section>
+
+</body>
+</html>

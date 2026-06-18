@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأماكن الرياضية</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo">SportBooking</div>
+        <nav>
+            <a href="{{ url_for('home') }}">الرئيسية</a>
+            <a href="{{ url_for('facilities_page') }}">الأماكن</a>
+            <a href="{{ url_for('booking') }}">الحجز</a>
+            <a href="{{ url_for('login') }}">تسجيل الدخول</a>
+        </nav>
+    </div>
+</header>
+
+<div class="page-title">الأماكن المتاحة للحجز</div>
+
+<div class="cards-container">
+    <div class="card">
+        <img src="{{ url_for('static', filename='imge/large-640x360.jpg') }}" alt="صاله مغطاه شبين الكوم">
+        <h3>صاله مغطاه شبين الكوم</h3>
+        <p>أرضية ممتازة – إضاءة ليلية – مناسب للمباريات والتدريبات.</p>
+        <p>250 / الساعه</p>
+        <a href="{{ url_for('booking') }}?facility=1" class="card-btn">احجز الآن</a>
+    </div>
+
+    <div class="card">
+        <img src="{{ url_for('static', filename='imge/IMG-20251205-WA0004.jpg') }}" alt="استاد ستي كلوب">
+        <h3>استاد ستي كلوب</h3>
+        <p>مجهز بالمراجيح والأضواء – مناسب لجميع الأعمار.</p>
+        <p>250 / الساعه</p>
+        <a href="{{ url_for('booking') }}?facility=2" class="card-btn">احجز الآن</a>
+    </div>
+
+    <div class="card">
+        <img src="{{ url_for('static', filename='imge/IMG-20251205-WA0005.jpg') }}" alt="ملعب اسكواتش منوف">
+        <h3>ملعب اسكواش منوف</h3>
+        <p>ملعب حديث – الأرضية مطاطية – مناسب للمبتدئين والمحترفين.</p>
+        <p>150 / الساعه</p>
+        <a href="{{ url_for('booking') }}?facility=3" class="card-btn">احجز الآن</a>
+    </div>
+
+    <div class="card">
+        <img src="{{ url_for('static', filename='imge/WhatsApp Image 2025-12-05 at 17.51.22_6f14bd39.jpg') }}" alt="ملعب اسكواش قويسنا">
+        <h3>ملعب اسكواش قويسنا</h3>
+        <p>إضاءة ممتازة – حجز بالساعة – مدرب متاح عند الطلب.</p>
+        <p>500 / الساعه</p>
+        <a href="{{ url_for('booking') }}?facility=4" class="card-btn">احجز الآن</a>
+    </div>
+
+    <div class="card">
+        <img src="{{ url_for('static', filename='imge/WhatsApp Image 2025-12-05 at 17.48.16_0be5db8e.jpg') }}" alt="صاله جيم في قويسنا">
+        <h3>صاله جيم في قويسنا</h3>
+        <p>أجهزة حديثة – مدربين محترفين – اشتراكات يومية وشهرية.</p>
+        <p>200 / شهر<br>20 / يومين</p>
+        <a href="{{ url_for('booking') }}?facility=5" class="card-btn">احجز الآن</a>
+    </div>
+
+    <div class="card">
+        <img src="{{ url_for('static', filename='imge/WhatsApp Image 2025-12-05 at 17.30.06_9d6faac7.jpg') }}" alt="صاله جيم البور شبين">
+        <h3>صاله جيم البور شبين</h3>
+        <p>معدات كاملة – حصص جماعية – مناسب لجميع المستويات.</p>
+        <p>200 / شهر<br>20 / يومين</p>
+        <a href="{{ url_for('booking') }}?facility=6" class="card-btn">احجز الآن</a>
+    </div>
+
+    <div class="card">
+        <img src="{{ url_for('static', filename='imge/IMG-20251205-WA0006.jpg') }}" alt="حمام سباحه شبين">
+        <h3>حمام سباحه شبين 1</h3>
+        <p>حمام أولمبي – مناسب للتدريب – حجز بالساعة.</p>
+        <p>150 / ساعه</p>
+        <a href="{{ url_for('booking') }}?facility=7" class="card-btn">احجز الآن</a>
+    </div>
+
+    <div class="card">
+        <img src="{{ url_for('static', filename='imge/IMG-20251205-WA0002.jpg') }}" alt="حمام سباحه شبين الكوم">
+        <h3>حمام سباحه شبين الكوم</h3>
+        <p>حمام نصف أولمبي – للأطفال والكبار – أمن وسلامة متوفر.</p>
+        <p>100 / الساعه</p>
+        <a href="{{ url_for('booking') }}?facility=8" class="card-btn">احجز الآن</a>
+    </div>
+
+    <div class="card">
+        <img src="{{ url_for('static', filename='imge/IMG-20251205-WA0003.jpg') }}" alt="ملعب كرة قدم الشهداء">
+        <h3>ملعب كرة قدم الشهداء</h3>
+        <p>مستوى ممتاز – متاح للحجز الفردي والجماعي.</p>
+        <p>200 / الساعه</p>
+        <a href="{{ url_for('booking') }}?facility=9" class="card-btn">احجز الآن</a>
+    </div>
+
+    <div class="card">
+        <img src="{{ url_for('static', filename='imge/WhatsApp Image 2025-12-04 at 16.05.13_42b250ca.jpg') }}" alt="ملعب الكبتانو بنها">
+        <h3>ملعب الكبتانو بنها</h3>
+        <p>أرضية ممتازة – مدرجات – إضاءة ليلية كاملة.</p>
+        <p>150 / الساعه صباحا<br>220 / الساعه مساءا</p>
+        <a href="{{ url_for('booking') }}?facility=10" class="card-btn">احجز الآن</a>
+    </div>
+
+    <div class="card">
+        <img src="{{ url_for('static', filename='imge/WhatsApp Image 2025-12-05 at 17.58.16_9d5d03af.jpg') }}" alt="ملعب الجمهوريه">
+        <h3>ملعب الجمهوريه</h3>
+        <p>مجهز تجهيز كامل – متاح للحجز الفردي والجماعي.</p>
+        <p>150 / الساعه صباحا<br>220 / الساعه مساءا</p>
+        <a href="{{ url_for('booking') }}?facility=11" class="card-btn">احجز الآن</a>
+    </div>
+</div>
+
+</body>
+</html>
+

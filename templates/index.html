@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportBooking - الرئيسية</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<!-- ====== NAVBAR ====== -->
+<header>
+    <div class="navbar">
+        <div class="logo">SportBooking</div>
+        <nav>
+            <a href="{{ url_for('home') }}">الرئيسية</a>
+            <a href="{{ url_for('facilities_page') }}">الأماكن</a>
+            <a href="{{ url_for('booking') }}">الحجز</a>
+            <a href="{{ url_for('login') }}">تسجيل الدخول</a>
+        </nav>
+    </div>
+</header>
+
+<!-- ====== MAIN CONTENT ====== -->
+<div class="hero">
+    <div class="hero-content">
+        <h1> مرحبا بيك ف موقعنا</h1>
+        <h1>احجز ملعبك أو الجيم أو حمام السباحة في المنوفية بسهول </h1>
+        <p>إدارة سهلة وسريعة لحجوزاتك الرياضية في أي وقت ومن أي مكان</p>
+        <a href="{{ url_for('booking') }}" class="hero-btn">ابدأ الحجز الآن</a>
+    </div>
+</div>
+
+</body>
+</html>

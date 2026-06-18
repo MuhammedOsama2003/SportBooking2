@@ -1,0 +1,92 @@
+<!-- <!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إنشاء حساب</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo">SportBooking</div>
+        <nav>
+            <a href="index.html">الرئيسية</a>
+            <a href="facilities.html">الأماكن</a>
+            <a href="booking.html">الحجز</a>
+            <a href="login.html">تسجيل الدخول</a>
+        </nav>
+    </div>
+</header>
+
+<section class="auth-section">
+    <h2>إنشاء حساب جديد</h2>
+    <form action="#" method="POST" class="auth-form">
+        <label>الاسم الكامل</label>
+        <input type="text" name="fullname" required>
+
+        <label>البريد الإلكتروني</label>
+        <input type="email" name="email" required>
+
+        <label>كلمة المرور</label>
+        <input type="password" name="password" required>
+
+        <label>تأكيد كلمة المرور</label>
+        <input type="password" name="confirm_password" required>
+
+        <button type="submit" class="btn">تسجيل</button>
+
+        <p class="link">لديك حساب؟ <a href="login.html">تسجيل الدخول</a></p>
+    </form>
+</section>
+
+</body>
+</html> -->
+ 
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إنشاء حساب</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo">SportBooking</div>
+        <nav>
+            <a href="{{ url_for('home') }}">الرئيسية</a>
+            <a href="{{ url_for('facilities_page') }}">الأماكن</a>
+            <a href="{{ url_for('booking') }}">الحجز</a>
+            <a href="{{ url_for('login') }}" class="active">تسجيل الدخول</a>
+        </nav>
+    </div>
+</header>
+
+<section class="auth-section">
+    <h2>إنشاء حساب جديد</h2>
+    <form action="#" method="POST" class="auth-form">
+        <label>الاسم الكامل</label>
+        <input type="text" name="fullname" required>
+
+        <label>البريد الإلكتروني</label>
+        <input type="email" name="email" required>
+
+        <label>كلمة المرور</label>
+        <input type="password" name="password" required>
+
+        <label>تأكيد كلمة المرور</label>
+        <input type="password" name="confirm_password" required>
+
+        <button type="submit" class="btn">تسجيل</button>
+
+        <p class="link">لديك حساب؟ <a href="{{ url_for('login') }}">تسجيل الدخول</a></p>
+    </form>
+</section>
+
+</body>
+</html>

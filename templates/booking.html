@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الحجز</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo">SportBooking</div>
+        <nav>
+            <a href="{{ url_for('home') }}">الرئيسية</a>
+            <a href="{{ url_for('facilities_page') }}">الأماكن</a>
+            <a href="{{ url_for('booking') }}" class="active">الحجز</a>
+            <a href="{{ url_for('login') }}">تسجيل الدخول</a>
+        </nav>
+    </div>
+</header>
+
+<div class="page-title">صفحة الحجز</div>
+
+<div class="booking-form">
+    {% if success %}
+        <p style="color: green; text-align: center;">تم إرسال الحجز بنجاح!</p>
+    {% endif %}
+    <form action="{{ url_for('booking') }}" method="POST">
+        <label>المكان</label>
+        <input type="text" name="facility" id="facility" readonly>
+
+        <label>اسمك الكامل</label>
+        <input type="text" name="fullname" required>
+
+        <label>رقم الهاتف</label>
+        <input type="tel" name="phone" required>
+
+        <label>البريد الإلكتروني</label>
+        <input type="email" name="email" required>
+
+        <label>التاريخ والوقت</label>
+        <input type="datetime-local" name="datetime" required>
+
+        <button type="submit" class="btn">تأكيد الحجز</button>
+    </form>
+</div>
+
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const facilityId = urlParams.get('facility');
+
+    const facilities = {
+        1: "صاله مغطاه شبين الكوم",
+        2: "استاد ستي كلوب",
+        3: "ملعب اسكواتش منو",
+        4: "ملعب اسكواش قويسنا",
+        5: "صاله جيم في قويسنا",
+        6: "صاله الجيم البرو شبين",
+        7: "حمام سباحة شبين",
+        8: "حمام سباحة  شبين الكوم",
+        9: "ملعب كرة قدم الشهداء",
+        10:"ملعب الكبتانو بنها",
+        11:"ملعب الجمهوريه"
+    };
+
+    if(facilityId && facilities[facilityId]){
+        document.getElementById('facility').value = facilities[facilityId];
+    }
+</script>
+
+</body>
+</html>
